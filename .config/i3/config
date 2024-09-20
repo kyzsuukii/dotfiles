@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Cascadia Code 11
+font pango:Cascadia Code 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -52,7 +52,7 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec --no-startup-id dmenu_run
@@ -219,3 +219,7 @@ bindsym $mod+Ctrl+Right resize grow width 10
 bindsym $mod+Ctrl+Up resize shrink height 10
 bindsym $mod+Ctrl+Down resize grow height 10
 bindsym $mod+Ctrl+Left resize shrink width 10
+
+exec --no-startup-id greenclip daemon
+
+bindsym $mod+Shift+v exec "greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'"
