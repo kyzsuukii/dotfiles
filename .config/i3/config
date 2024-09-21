@@ -257,7 +257,8 @@ exec --no-startup-id greenclip daemon
 
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
-bindsym $mod+Shift+v exec "greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'"
+# bindsym $mod+Shift+v exec "greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'"
+bindsym $mod+Shift+v exec rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
