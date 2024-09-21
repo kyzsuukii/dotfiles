@@ -236,8 +236,6 @@ bindsym $mod+Ctrl+Left resize shrink width 10
 
 exec --no-startup-id greenclip daemon
 
-exec --no-startup-id volumeicon
-
 exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 bindsym $mod+Shift+v exec "greenclip print | grep . | dmenu -i -l 10 -p clipboard | xargs -r -d'\n' -I '{}' greenclip print '{}'"
