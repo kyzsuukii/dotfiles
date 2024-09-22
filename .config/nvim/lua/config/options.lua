@@ -119,4 +119,4 @@ end
 
 -- Colorscheme
 -- By default, use rose-pine
-cmd.colorscheme("gruvbox")
+cmd.colorscheme("onedark")

@@ -20,18 +20,18 @@ return {{
 
         function loadcolors()
             -- Rose-pine palette
-            local rosepine = require("gruvbox")
+            local onedark = require("onedark")
             local colors = {
-                bg = rosepine.base,
-                fg = rosepine.text,
-                yellow = rosepine.gold,
-                cyan = rosepine.foam,
-                black = rosepine.subtled,
-                green = rosepine.pine,
-                white = rosepine.text,
-                magenta = rosepine.iris,
-                blue = rosepine.rose,
-                red = rosepine.love
+                bg = onedark.base,
+                fg = onedark.text,
+                yellow = onedark.gold,
+                cyan = onedark.foam,
+                black = onedark.subtled,
+                green = onedark.pine,
+                white = onedark.text,
+                magenta = onedark.iris,
+                blue = onedark.rose,
+                red = onedark.love
             }
 
             -- Try to load pywal colors
