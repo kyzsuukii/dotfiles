@@ -57,7 +57,7 @@ separator-foreground = ${colors.disabled}
 font-0 = CaskaydiaMono NF:size=10;2
 
 modules-left = xworkspaces systray xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth battery date
+modules-right = filesystem pulseaudio memory cpu wlan eth battery date
 # modules-right = filesystem pulseaudio xkeyboard memory cpu date
 
 cursor-click = pointer
@@ -87,8 +87,8 @@ format-low = <label-low> <animation-low>
 format-charging = <animation-charging> <label-charging>
 format-discharging = <ramp-capacity> <label-discharging>
 
-format-full-prefix = "  "
-label-full = %percentage%%
+format-full-prefix = ""
+label-full = %percentage:4%%
 
 animation-charging-0 = " "
 animation-charging-1 = " "
@@ -114,7 +114,7 @@ animation-low-0 = "! "
 animation-low-1 = "  "
 animation-low-framerate = 200
 
-full-at = 99
+full-at = 95
 
 low-at = 20
 
@@ -150,17 +150,17 @@ label-empty-padding = 1
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:20:...%
+label = %title:0:30:...%
 
 [module/filesystem]
 type = internal/fs
 interval = 25
 
-format-mounted-prefix = "  "
+format-mounted-prefix = ""
 format-mounted-prefix-foreground = ${colors.menucol-blue}
 mount-0 = /
 
-label-mounted = %percentage_used%%
+label-mounted = %percentage_used:4%%
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
@@ -168,22 +168,22 @@ label-unmounted-foreground = ${colors.disabled}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume-prefix = "  "
+format-volume-prefix = ""
 format-volume-prefix-foreground = ${colors.menucol-sealine}
 format-volume = <label-volume>
 
-label-volume = %percentage%%
+label-volume = %percentage:4%%
 
-label-muted = " "
+label-muted = ""
 label-muted-foreground = ${colors.disabled}
 
 [module/xkeyboard]
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = "  "
+format-prefix = ""
 format-prefix-foreground = ${colors.menucol-red}
-label-layout = %layout%
+label-layout = %layout:4%
 
 label-indicator-padding = 2
 abel-indicator-margin = 1
@@ -193,16 +193,16 @@ label-indicator-background = ${colors.secondary}
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = "  "
+format-prefix = ""
 format-prefix-foreground = ${colors.menucol-purple}
-label = %percentage_used:2%%
+label = %percentage_used:4%%
 
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = "  "
+format-prefix = ""
 format-prefix-foreground = ${colors.menucol-pink}
-label = %percentage:2%%
+label = %percentage:4%%
 
 [network-base]
 type = internal/network
