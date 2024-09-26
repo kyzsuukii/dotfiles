@@ -22,3 +22,7 @@ end
 
 -- Load main config
 require("config")
+
+if vim.g.neovide then
+  vim.o.guifont = "CaskaydiaMono NFM"
+end
